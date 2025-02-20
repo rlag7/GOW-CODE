@@ -1,0 +1,331 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catering Theme Tailwind Page</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            /* Custom active link styles */
+            .active-link {
+                position: relative;
+                text-decoration: none;
+            }
+
+            .active-link::after {
+                content: '';
+                position: absolute;
+                bottom: -10px; /* Adjust the padding above the line */
+                left: 50%; /* Position from the center */
+                transform: translateX(-50%); /* Center the line */
+                width: 150%; /* Set the width to 150% of the link's width */
+                height: 2px;
+                background-color: #B96127; /* Active link color */
+            }
+
+            /* Reset underline for hover */
+            .navbar-links li a:hover {
+                text-decoration: none;
+            }
+
+            /* Make the nav links more spaced out */
+            .navbar-links li {
+                padding: 0 20px; /* Add extra space between the links */
+            }
+
+        </style>
+    </head>
+    <body class="bg-[#1C1B1B] text-white">
+    <!-- Banner & Navbar -->
+    <div class="relative">
+        <img src="img/banner.png" alt="Banner" class="w-full h-full object-cover">
+        <nav class="absolute top-0 left-0 w-full p-5 text-white">
+            <div class="flex justify-between items-center w-full">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <img src="img/logo.png" alt="Logo" class="w-full max-w-[200px]"> <!-- Logo full width with a max width -->
+                </div>
+                <!-- Navigation Links -->
+                <ul class="flex justify-center space-x-6 flex-grow mx-auto text-lg font-semibold navbar-links">
+                    <li><a href="/index.html" class="hover:underline active-link">Home</a></li>
+                    <li><a href="/about.html" class="hover:underline">About</a></li>
+                    <li><a href="/contact.html" class="hover:underline">Contact</a></li>
+                </ul>
+
+                <!-- Reservation Button -->
+                <a href="#" class="ml-6 bg-[#B96127] px-5 py-2 rounded text-white font-bold">Reservation</a>
+            </div>
+        </nav>
+
+        <!-- Welcome Text -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white p-10">
+            <p class="text-sm text-white">Welcome to</p>
+            <h1 class="text-5xl font-bold text-white py-10">CATHERTHEME</h1>
+            <div class="mt-5">
+                <a href="#reservation" class="border border-white text-white py-2 px-5 rounded mr-4">Book Now</a>
+                <a href="#menu" class="text-white underline">Open Menu Now</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Why People Choose Us Section -->
+    <section class="py-10 text-center text-white">
+        <!-- Titel en beschrijving -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-bold text-white py-4">Why People Choose Us?</h2>
+            <p class="text-sm text-[#797B78] font-semibold max-w-2xl mx-auto">
+                Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc varius. Facilisis eget cras sit semper sit enim.
+                Turpis aliquet at ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+            </p>
+        </div>
+
+        <!-- Grid Layout voor USP’s -->
+        <div class="grid grid-cols-3 gap-10 max-w-4xl mx-auto py-10">
+            <!-- USP 1 -->
+            <div class="flex flex-col items-center text-center">
+                <div class="text-white text-5xl mb-4">
+                    <i class="fas fa-lemon"></i> <!-- Icon -->
+                </div>
+                <h3 class="text-xl font-bold">Fresh Ingredients</h3>
+                <p class="text-xs max-w-xs text-[#797B78] py-4">
+                    Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc varius. Facilisis eget cras sit semper sit enim.
+                    Turpis aliquet at ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+                </p>
+            </div>
+
+            <!-- USP 2 -->
+            <div class="flex flex-col items-center text-center">
+                <div class="text-white text-5xl mb-4">
+                    <i class="fas fa-utensils"></i> <!-- Icon -->
+                </div>
+                <h3 class="text-xl font-bold">Customized Menus</h3>
+                <p class="text-xs max-w-xs text-[#797B78] py-4">
+                    Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc varius. Facilisis eget cras sit semper sit enim.
+                    Turpis aliquet at ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+                </p>
+            </div>
+
+            <!-- USP 3 -->
+            <div class="flex flex-col items-center text-center">
+                <div class="text-white text-5xl mb-4">
+                    <i class="fas fa-users"></i> <!-- Icon -->
+                </div>
+                <h3 class="text-xl font-bold">Exceptional Service</h3>
+                <p class="text-xs max-w-xs text-[#797B78] py-4">
+                    Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc varius. Facilisis eget cras sit semper sit enim.
+                    Turpis aliquet at ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Image with Working Hours -->
+    <div class="relative">
+        <img src="img/open-times-banner.png" class="w-full h-[450px] object-cover">
+        <div class="absolute left-1/2 transform -translate-x-1/2 top-10 w-full flex justify-between p-10">
+            <div class="max-w-7xl mx-auto w-full flex justify-between">
+                <!-- 75% Section (Title + Buttons) -->
+                <div class="w-3/4 flex flex-col justify-center space-y-6">
+                    <h3 class="text-5xl font-bold text-white text-left">Working Hours</h3>
+                    <div class="flex justify-start space-x-4">
+                        <a href="#reservation" class="bg-[#B96127] text-white py-2 px-6 rounded-md text-lg">Book a Table</a>
+                        <a href="#menu" class="text-white underline py-2 px-2 text-lg font-bold">Contact us</a>
+                    </div>
+                </div>
+
+                <!-- 25% Section (Working Hours Box) -->
+                <div class="w-1/4 bg-[#303337] text-white p-12 rounded-xl">
+                    <p class="text-lg">Maandag, 12:00 - 18:00</p>
+                    <p class="text-lg">Dinsdag, 12:00 - 18:00</p>
+                    <p class="text-lg">Woensdag, 12:00 - 18:00</p>
+                    <p class="text-lg">Donderdag, 12:00 - 20:00</p>
+                    <p class="text-lg">Vrijdag, 12:00 - 18:00</p>
+                    <p class="text-lg">Zaterdag, 11:00 - 18:00</p>
+                    <p class="text-lg">Zondag, 12:00 - 18:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Testimonials -->
+    <section class="p-10 text-center">
+        <div class="max-w-7xl mx-auto w-full">
+            <h2 class="text-3xl font-bold text-white">Why people choose us?</h2>
+            <p class="text-sm text-[#797B78] font-semibold py-6 px-5rem">
+                Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc varius. Facilisis eget cras sit semper sit enim.
+                Turpis aliquet at ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+            </p>
+            <div class="mt-5 flex justify-center space-x-5">
+                <div class="bg-[#303337] p-5 shadow-lg rounded-[25px] text-white w-1/3 text-center">
+                    <p class="text-lg font-semibold">"The best catering service!"</p>
+                    <div class="mt-2 flex justify-center space-x-1 text-[#B96127]">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                    </div>
+                    <p class="mt-2 text-white">- Jane Doe</p>
+                </div>
+                <div class="bg-[#303337] p-5 shadow-lg rounded-[25px] text-white w-1/3 text-center">
+                    <p class="text-lg font-semibold">"Delicious food and great service."</p>
+                    <div class="mt-2 flex justify-center space-x-1 text-[#B96127]">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                    </div>
+                    <p class="mt-2 text-white">- John Smith</p>
+                </div>
+                <div class="bg-[#303337] p-5 shadow-lg rounded-[25px] text-white w-1/3 text-center">
+                    <p class="text-lg font-semibold">"Exceeded all expectations!"</p>
+                    <div class="mt-2 flex justify-center space-x-1 text-[#B96127]">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                    </div>
+                    <p class="mt-2 text-white">- Emily Green</p>
+                </div>
+            </div>
+            <!-- Testimonial navigation dots -->
+            <div class="mt-5 flex justify-center space-x-2">
+                <span class="h-2 w-2 bg-[#B96127] rounded-full"></span>
+                <span class="h-2 w-2 bg-[#B96127] rounded-full"></span>
+                <span class="h-2 w-2 bg-[#B96127] rounded-full"></span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Statistics Section -->
+    <section class="py-16 text-center">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="flex justify-center space-x-28">
+                <!-- Stat 1 -->
+                <div class="text-center px-6">
+                    <div class="text-5xl font-bold text-white">
+                        <span class="counter" data-target="1287">0</span><span class="text-[#B96127]">+</span>
+                    </div>
+                    <p class="text-md text-white mt-2">Visitors Daily</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="text-center px-6">
+                    <div class="text-5xl font-bold text-white">
+                        <span class="counter" data-target="578">0</span><span class="text-[#B96127]">+</span>
+                    </div>
+                    <p class="text-md text-white mt-2">Deliveries Monthly</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="text-center px-6">
+                    <div class="text-5xl font-bold text-white">
+                        <span class="counter" data-target="1440">0</span><span class="text-[#B96127]">+</span>
+                    </div>
+                    <p class="text-md text-white mt-2">Positive Feedback</p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="text-center px-6">
+                    <div class="text-5xl font-bold text-white">
+                        <span class="counter" data-target="40">0</span><span class="text-[#B96127]">+</span>
+                    </div>
+                    <p class="text-md text-white mt-2">Awards & Honors</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Subscribe Section -->
+    <section class="relative h-[420px] flex items-center bg-cover bg-center px-16" style="background-image: url('img/newsletter.png');">
+        <div class="max-w-7xl mx-auto w-full flex justify-start">
+            <div class="max-w-lg">
+                <h2 class="text-3xl font-bold text-white mb-4">Subscribe to Our Newsletter</h2>
+                <p class="text-white text-sm mb-6">
+                    Get the latest updates, special offers, and exclusive deals delivered straight to your inbox.
+                </p>
+
+                <div class="flex items-center gap-4">
+                    <input type="email" placeholder="Enter your email" class="p-3 rounded-lg text-black w-[400px]">
+                    <button class="bg-[#B96127] text-white py-3 px-6 rounded-lg font-bold hover:bg-[#944f20] transition">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#303337] text-white p-10">
+        <div class=" max-w-7xl mx-auto mb-10"></div> <!-- Dashed Border Before Content -->
+
+        <div class="max-w-7xl mx-auto grid grid-cols-4 gap-10">
+            <div>
+                <img src="img/logo.png" alt="Logo" class="w-20 mb-3">
+                <p>Delivering high-quality catering services for all occasions.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-[#B96127]">Restaurant Hours</h3>
+                <p>Mon-Fri: 9AM - 6PM</p>
+                <p>Sat-Sun: 10AM - 8PM</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-[#B96127]">Quick Links</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-[#B96127]">Home</a></li>
+                    <li><a href="#" class="hover:text-[#B96127]">Menu</a></li>
+                    <li><a href="#" class="hover:text-[#B96127]">Catering</a></li>
+                    <li><a href="#" class="hover:text-[#B96127]">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Us & Sign-up Form in the Same Column -->
+            <div>
+                <h3 class="text-lg font-bold text-[#B96127]">Contact Us</h3>
+                <p>Email: info@catering.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Address: 123 Food Street, NY</p>
+                <p>Support: support@catering.com</p>
+
+                <!-- Newsletter Sign-up Form -->
+                <div class="mt-6">
+                    <h3 class="text-lg font-bold text-[#B96127]">Subscribe to Our Newsletter</h3>
+                    <div class="relative mt-2">
+                        <input type="email" placeholder="Enter your email" class="p-2 w-full rounded text-black pr-20">
+                        <button class="absolute top-0 right-0 bg-[#B96127] px-4 py-2 rounded-r text-white">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t-2 border-dashed border-gray-500 max-w-7xl mx-auto mt-10 pt-5 text-center">
+            <p>&copy; 2025 Your Catering Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    </body>
+    <!-- Counter Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll(".counter");
+
+            counters.forEach(counter => {
+                counter.innerText = "0";
+                const target = +counter.getAttribute("data-target");
+                const increment = target / 100;
+
+                const updateCounter = () => {
+                    const current = +counter.innerText;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current + increment);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCounter();
+            });
+        });
+    </script>
+    </html>

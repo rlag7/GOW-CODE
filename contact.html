@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Theme Tailwind Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Custom active link styles */
+        .active-link {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .active-link::after {
+            content: '';
+            position: absolute;
+            bottom: -10px; /* Adjust the padding above the line */
+            left: 50%; /* Position from the center */
+            transform: translateX(-50%); /* Center the line */
+            width: 150%; /* Set the width to 150% of the link's width */
+            height: 2px;
+            background-color: #B96127; /* Active link color */
+        }
+
+        /* Reset underline for hover */
+        .navbar-links li a:hover {
+            text-decoration: none;
+        }
+
+        /* Make the nav links more spaced out */
+        .navbar-links li {
+            padding: 0 20px; /* Add extra space between the links */
+        }
+
+    </style>
+</head>
+<body class="bg-[#1C1B1B] text-white">
+<!-- Banner & Navbar -->
+<div class="relative">
+    <img src="img/banner.png" alt="Banner" class="w-full h-full object-cover">
+    <nav class="absolute top-0 left-0 w-full p-5 text-white">
+        <div class="flex justify-between items-center w-full">
+            <!-- Logo Section -->
+            <div class="flex items-center">
+                <img src="img/logo.png" alt="Logo" class="w-full max-w-[200px]"> <!-- Logo full width with a max width -->
+            </div>
+            <!-- Navigation Links -->
+            <ul class="flex justify-center space-x-6 flex-grow mx-auto text-lg font-semibold navbar-links">
+                <li><a href="/index.html" class="hover:underline">Home</a></li>
+                <li><a href="/about.html" class="hover:underline">About</a></li>
+                <li><a href="/contact.html" class="hover:underline active-link">Contact</a></li>
+            </ul>
+
+            <!-- Reservation Button -->
+            <a href="#" class="ml-6 bg-[#B96127] px-5 py-2 rounded text-white font-bold">Reservation</a>
+        </div>
+    </nav>
+
+    <!-- Welcome Text -->
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white p-10">
+        <p class="text-sm text-white">send a message</p>
+        <h1 class="text-5xl font-bold text-white py-10">CONTACT US</h1>
+    </div>
+</div>
+
+<!-- Contact Form Section with extra padding -->
+<div class="max-w-[1440px] mx-auto px-6 py-20">
+    <div class="bg-[#303337] rounded-[40px] p-10">
+        <h2 class="text-3xl font-bold text-left mb-6">
+            <span class="text-white">Contact</span>
+            <span class="text-[#B96127]">Us</span>
+        </h2>
+
+        <form>
+            <!-- First Row: First Name and Last Name -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label for="first-name" class="block text-lg font-semibold mb-2">First Name</label>
+                    <input type="text" id="first-name" name="first-name" class="w-full bg-transparent border-b-2 border-white text-white py-2 px-3 focus:outline-none" placeholder="Enter your first name">
+                </div>
+                <div>
+                    <label for="last-name" class="block text-lg font-semibold mb-2">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" class="w-full bg-transparent border-b-2 border-white text-white py-2 px-3 focus:outline-none" placeholder="Enter your last name">
+                </div>
+            </div>
+
+            <!-- Second Row: Email and Date -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label for="email" class="block text-lg font-semibold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-transparent border-b-2 border-white text-white py-2 px-3 focus:outline-none" placeholder="Enter your email">
+                </div>
+                <div>
+                    <label for="date" class="block text-lg font-semibold mb-2">Date</label>
+                    <input type="date" id="date" name="date" class="w-full bg-transparent border-b-2 border-white text-white py-2 px-3 focus:outline-none">
+                </div>
+            </div>
+
+            <!-- Third Row: Message Field -->
+            <div class="mb-6">
+                <label for="message" class="block text-lg font-semibold mb-2">Message</label>
+                <textarea id="message" name="message" rows="4" class="w-full bg-transparent border-b-2 border-white text-white py-2 px-3 focus:outline-none" placeholder="Enter your message"></textarea>
+            </div>
+
+            <!-- Newsletter Checkbox -->
+            <div class="mb-6 flex items-center">
+                <input type="checkbox" id="newsletter" name="newsletter" class="mr-2">
+                <label for="newsletter" class="text-white">I would like to receive the newsletter</label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="bg-[#B96127] text-white py-3 px-8 rounded-full font-bold hover:bg-[#944f20] transition">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<section class="w-full flex justify-center items-center bg-[#303337] px-6 py-10">
+    <!-- Google Maps -->
+    <div class="w-full max-w-[1440px] relative">
+        <iframe
+                class="w-full h-[480px] rounded-lg"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.142679620945!2d5.5664!3d51.4242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTEuNDI0MiwgNS41NjY0!5e0!3m2!1sen!2sus!4v1614280039289!5m2!1sen!2sus"
+                allowfullscreen=""
+                loading="lazy">
+        </iframe>
+
+        <!-- Locatie Box -->
+        <div class="absolute top-5 left-5 w-[90%] md:w-[450px] bg-[#303337] text-white flex items-center justify-center text-lg font-bold rounded-lg shadow-lg p-6 text-center">
+            De Burght 168, 5664 PS, Geldrop
+        </div>
+
+        <!-- Openingstijden Box -->
+        <div class="absolute top-[120px] left-5 w-[90%] md:w-[450px] bg-[#303337] text-white p-6 rounded-lg shadow-lg text-center">
+            <h3 class="text-2xl font-bold mb-4">Openingstijden</h3>
+            <ul class="text-lg space-y-2">
+                <li>Maandag, 12:00 - 18:00</li>
+                <li>Dinsdag, 12:00 - 18:00</li>
+                <li>Woensdag, 12:00 - 18:00</li>
+                <li>Donderdag, 12:00 - 20:00</li>
+                <li>Vrijdag, 12:00 - 18:00</li>
+                <li>Zaterdag, 11:00 - 18:00</li>
+                <li>Zondag, 12:00 - 18:00</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div class="flex flex-col md:flex-row justify-center items-start gap-6 max-w-5xl mx-auto py-20 px-6">
+    <!-- FAQ Questions -->
+    <div class="w-full md:w-1/3 bg-[#303337] p-6 rounded-lg h-80">
+        <div class="faq-question py-3 px-4 bg-[#303337] hover:bg-[#B96127] cursor-pointer transition duration-300 rounded" onclick="toggleAnswer(1)" id="question1">Wat zijn de openingstijden?</div>
+        <div class="faq-question py-3 px-4 bg-[#303337] hover:bg-[#B96127] cursor-pointer transition duration-300 rounded mt-1" onclick="toggleAnswer(2)" id="question2">Hoe kan ik contact opnemen?</div>
+        <div class="faq-question py-3 px-4 bg-[#303337] hover:bg-[#B96127] cursor-pointer transition duration-300 rounded mt-1" onclick="toggleAnswer(3)" id="question3">Waar zijn jullie gevestigd?</div>
+        <div class="faq-question py-3 px-4 bg-[#303337] hover:bg-[#B96127] cursor-pointer transition duration-300 rounded mt-1" onclick="toggleAnswer(4)" id="question4">Wat zijn de betaalmethoden?</div>
+        <div class="faq-question py-3 px-4 bg-[#303337] hover:bg-[#B96127] cursor-pointer transition duration-300 rounded mt-1" onclick="toggleAnswer(5)" id="question5">Kan ik een reservering maken?</div>
+    </div>
+
+    <!-- FAQ Answers -->
+    <div class="w-full md:w-1/2 bg-[#B96127] text-white p-6 rounded-lg flex flex-col justify-center items-center h-80" id="answer-box">
+        <h3 class="text-2xl font-bold text-center" id="answer-title">Kies een vraag</h3>
+        <p class="mt-4 text-center" id="answer-text">Klik op een vraag om het antwoord te zien.</p>
+    </div>
+</div>
+<!-- Subscribe Section -->
+<section class="relative h-[420px] flex items-center bg-cover bg-center px-16" style="background-image: url('img/newsletter.png');">
+    <div class="max-w-7xl mx-auto w-full flex justify-start">
+        <div class="max-w-lg">
+            <h2 class="text-3xl font-bold text-white mb-4">Subscribe to Our Newsletter</h2>
+            <p class="text-white text-sm mb-6">
+                Get the latest updates, special offers, and exclusive deals delivered straight to your inbox.
+            </p>
+
+            <div class="flex items-center gap-4">
+                <input type="email" placeholder="Enter your email" class="p-3 rounded-lg text-black w-[400px]">
+                <button class="bg-[#B96127] text-white py-3 px-6 rounded-lg font-bold hover:bg-[#944f20] transition">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#303337] text-white p-10">
+    <div class=" max-w-7xl mx-auto mb-10"></div> <!-- Dashed Border Before Content -->
+
+    <div class="max-w-7xl mx-auto grid grid-cols-4 gap-10">
+        <div>
+            <img src="img/logo.png" alt="Logo" class="w-20 mb-3">
+            <p>Delivering high-quality catering services for all occasions.</p>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold text-[#B96127]">Restaurant Hours</h3>
+            <p>Mon-Fri: 9AM - 6PM</p>
+            <p>Sat-Sun: 10AM - 8PM</p>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold text-[#B96127]">Quick Links</h3>
+            <ul>
+                <li><a href="#" class="hover:text-[#B96127]">Home</a></li>
+                <li><a href="#" class="hover:text-[#B96127]">Menu</a></li>
+                <li><a href="#" class="hover:text-[#B96127]">Catering</a></li>
+                <li><a href="#" class="hover:text-[#B96127]">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Us & Sign-up Form in the Same Column -->
+        <div>
+            <h3 class="text-lg font-bold text-[#B96127]">Contact Us</h3>
+            <p>Email: info@catering.com</p>
+            <p>Phone: +1 234 567 890</p>
+            <p>Address: 123 Food Street, NY</p>
+            <p>Support: support@catering.com</p>
+
+            <!-- Newsletter Sign-up Form -->
+            <div class="mt-6">
+                <h3 class="text-lg font-bold text-[#B96127]">Subscribe to Our Newsletter</h3>
+                <div class="relative mt-2">
+                    <input type="email" placeholder="Enter your email" class="p-2 w-full rounded text-black pr-20">
+                    <button class="absolute top-0 right-0 bg-[#B96127] px-4 py-2 rounded-r text-white">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="border-t-2 border-dashed border-gray-500 max-w-7xl mx-auto mt-10 pt-5 text-center">
+        <p>&copy; 2025 Your Catering Company. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+<script>
+    function toggleAnswer(questionNumber) {
+        const answers = {
+            1: { title: "Openingstijden", text: "Wij zijn geopend van maandag tot en met zondag van 12:00 - 18:00 uur." },
+            2: { title: "Contact opnemen", text: "Je kunt ons bereiken via e-mail op info@example.com of bellen naar 0123-456789." },
+            3: { title: "Onze locatie", text: "Wij zijn gevestigd op De Burght 168, 5664 PS, Geldrop." },
+            4: { title: "Betaalmethoden", text: "Wij accepteren iDEAL, creditcards, en contante betalingen in het restaurant." },
+            5: { title: "Reserveren", text: "Ja, je kunt een reservering maken via onze website of telefonisch." }
+        };
+
+        document.getElementById("answer-title").textContent = answers[questionNumber].title;
+        document.getElementById("answer-text").textContent = answers[questionNumber].text;
+    }
+</script>
+
+</html>
