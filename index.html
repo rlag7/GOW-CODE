@@ -17,29 +17,26 @@
         .active-link::after {
             content: '';
             position: absolute;
-            bottom: -10px; /* Adjust the padding above the line */
-            left: 50%; /* Position from the center */
-            transform: translateX(-50%); /* Center the line */
-            width: 150%; /* Set the width to 150% of the link's width */
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150%;
             height: 2px;
-            background-color: #B96127; /* Active link color */
+            background-color: #B96127;
         }
 
-        /* Reset underline for hover */
         .navbar-links li a:hover {
             text-decoration: none;
         }
 
-        /* Make the nav links more spaced out */
         .navbar-links li {
-            padding: 0 20px; /* Add extra space between the links */
+            padding: 0 20px;
         }
 
-        /* Hamburger menu styles */
+        /* Static Hamburger Menu (No Functionality) */
         .hamburger {
-            display: none; /* Hidden by default */
+            display: none;
             cursor: pointer;
-            z-index: 100; /* Ensure it's above other elements */
         }
 
         .hamburger .line {
@@ -47,125 +44,53 @@
             height: 3px;
             background-color: white;
             margin: 5px;
-            transition: all 0.3s ease; /* Smooth transition for animation */
-        }
-
-        /* Navbar links for mobile */
-        .navbar-links {
-            display: flex; /* Show by default on larger screens */
         }
 
         @media (max-width: 768px) {
             .hamburger {
-                display: block; /* Show hamburger on small screens */
+                display: block;
             }
 
             .navbar-links {
-                display: none; /* Hide nav links by default on small screens */
-                flex-direction: column;
-                width: 100%;
-                background-color: #1C1B1B;
-                position: absolute;
-                top: 80px; /* Adjust based on your navbar height */
-                left: 0;
-                padding: 10px 0;
-                z-index: 49; /* Ensure it's below the hamburger icon */
-            }
-
-            .navbar-links.active {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .navbar-links li {
-                padding: 10px 0;
-                text-align: center;
-            }
-
-            /* Banner text adjustments for mobile */
-            .banner-text {
-                top: 50%; /* Adjust banner text position */
-                transform: translate(-50%, -50%);
-                width: 90%; /* Ensure text fits on small screens */
-            }
-
-            .banner-text h1 {
-                font-size: 2.5rem; /* Smaller font size for mobile */
-            }
-
-            .banner-text .buttons {
-                flex-direction: column; /* Stack buttons vertically */
-                gap: 10px; /* Add space between buttons */
-            }
-
-            .working-hours-section {
-                flex-direction: column; /* Stack working hours content */
-            }
-
-            .working-hours-box {
-                width: 100%; /* Full width for working hours box */
-                margin-top: 20px; /* Add space between sections */
-            }
-
-            .testimonials-grid {
-                flex-direction: column; /* Stack testimonials */
-            }
-
-            .testimonial {
-                width: 100%; /* Full width for testimonials */
-                margin-bottom: 20px; /* Add space between testimonials */
-            }
-
-            .stats-grid {
-                flex-direction: column; /* Stack statistics */
-            }
-
-            .stat {
-                margin-bottom: 20px; /* Add space between stats */
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr; /* Stack footer columns */
+                display: none !important; /* Ensure it's hidden */
             }
         }
     </style>
 </head>
 <body class="bg-[#1C1B1B] text-white">
+
 <!-- Banner & Navbar -->
 <div class="relative">
     <img src="img/banner.png" alt="Banner" class="w-full h-[500px] md:h-[700px] object-cover">
-    <nav class="absolute top-0 left-0 w-full p-5 text-white z-50"> <!-- Added z-50 -->
+    <nav class="absolute top-0 left-0 w-full p-5 text-white z-50">
         <div class="flex justify-between items-center w-full">
-            <!-- Logo Section -->
             <div class="flex items-center">
                 <img src="img/logo.png" alt="Logo" class="w-full max-w-[200px]">
             </div>
 
-            <!-- Hamburger Menu -->
-            <div class="hamburger" id="hamburger">
+            <!-- Static Hamburger Menu Icon (No Click Functionality) -->
+            <div class="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
 
             <!-- Navigation Links -->
-            <ul class="flex justify-center space-x-6 flex-grow mx-auto text-lg font-semibold navbar-links" id="navbar-links">
+            <ul class="flex justify-center space-x-6 mx-auto text-lg font-semibold navbar-links">
                 <li><a href="/index.html" class="hover:underline active-link">Home</a></li>
                 <li><a href="/about.html" class="hover:underline">About</a></li>
                 <li><a href="/contact.html" class="hover:underline">Contact</a></li>
             </ul>
 
-            <!-- Reservation Button -->
             <a href="#" class="ml-6 bg-[#B96127] px-5 py-2 rounded text-white font-bold hidden md:block">Reservation</a>
         </div>
     </nav>
 
-    <!-- Welcome Text -->
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white p-10 banner-text">
+    <!-- Centered Banner Text & Buttons -->
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white p-10">
         <p class="text-sm text-white">Welcome to</p>
-        <h1 class="text-4xl md:text-7xl font-bold text-white py-6 md:py-10">CATHERTHEME</h1> <!-- Smaller font size for mobile -->
-        <div class="mt-5 buttons flex flex-col md:flex-row gap-4"> <!-- Stack buttons vertically on mobile -->
+        <h1 class="text-4xl md:text-7xl font-bold text-white py-6 md:py-10">CATHERTHEME</h1>
+        <div class="mt-5 flex flex-col md:flex-row gap-4 justify-center">
             <a href="#reservation" class="border border-white text-white py-2 px-5 rounded text-sm md:text-base">Book Now</a>
             <a href="#menu" class="text-white underline py-2 px-2 text-sm md:text-base font-bold">Open Menu Now</a>
         </div>
@@ -397,8 +322,9 @@
     </div>
 </footer>
 
-<!-- Counter Animation Script -->
+<!-- Scripts -->
 <script>
+    // Counter Animation Script
     document.addEventListener("DOMContentLoaded", function () {
         const counters = document.querySelectorAll(".counter");
 
@@ -418,21 +344,6 @@
             };
 
             updateCounter();
-        });
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const hamburger = document.getElementById("hamburger");
-        const navLinks = document.getElementById("navbar-links");
-
-        hamburger.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
-        });
-
-        document.querySelectorAll(".navbar-links li a").forEach(link => {
-            link.addEventListener("click", function () {
-                navLinks.classList.remove("active");
-            });
         });
     });
 </script>
